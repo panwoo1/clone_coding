@@ -74,3 +74,59 @@
 
 - https://flukeout.github.io/ css
 - https://flexboxfroggy.com/#ko flex
+
+### fixed
+
+- position fixed를 이용하면 스크롤해도 항상 제자리
+- 처음 만들어진 자리에 고정되어 있지만, top, left, right, bottom 중 하나만 수정해도 서로 다른 레이어에 위치하게 되어 원래 위치 무시됨
+
+### position
+
+- position: static (default)
+- position: fixed - element가 처음 생성된 자리에 고정
+- position: relative - element가 처음 생성된 위치를 기준점으로 top, bottom, left, right으로 위치를 조금씩 수정할 수 있음.
+- position: absolute - 가장 가까운 relative 부모를 기준으로 이동  
+  position: relative; 를 해주면 부모가 된다. 없으면 body
+
+### pseudo selector
+
+- 세부적으로 element를 선택해 주는 것
+- ex) div:first-child...last-child...
+- n번째 태그 수정 - nth-child(n) (even, odd, 3n +1 이런식으로...)
+
+- ~를 사용해 바로 뒤에 오는 형제 관계가 아닌 tag에도 스타일 적용
+- tag[attribute = "value"]을 통해 스타일 적용 가능
+- tag[attribute ~= "value"]으로 value를 포함하는 모든 tag에 스타일 적용 가능
+  = \*= is 'contains' , ~= = is 'exactly'
+- ::placeholder - placeholder의 특성만 바꾸고 싶을 때 사용
+- ::selection - 클릭해서 드래그할때 발생
+- ::first-letter - 첫 글자에만 적용
+- ::first-line - 첫 줄에만 적용
+
+### Combinators
+
+- div의 바로 밑 자식에서 span을 찾아서 그것만 효과를 주는 방법
+  - div span{} 이렇게 하면 div 밑에 모든 span이 효과를 가짐
+  - div > span 바로 밑을 찾게 되므로 바로 밑의 자식만
+  - p + span{} 형제에게 영향을 끼침
+
+### States
+
+- active - 해당 요소를 마우스로 클릭했을 때 효과를 적용
+- hover - 마우스가 해당 요소 위를 지나갈 때 효과를 적용
+- focus - 키보드로 선택되었을 때 효과를 적용
+- focus-within - 부오 요소에게 적용. 자신의 자식 요소 중 하나가 focused 되었을 때 효과를 적용
+- visited - 방문한 사이트일 경우에 효과를 적용
+- 조건을 나열해 여러 상황 설정 가능 ex) high-tag:hover ...
+
+### color
+
+- color system
+  1. 16 진수 ex) #fcce00
+  2. RGB ex) rgb(252, 206, 0), rgba(205, 23, 0, 0,5) (4번쨰 element는 투명도)
+  3. color ex) tomato, teal ,...
+
+### variable
+
+- :root 라는 엘리먼트 추가 -> 모든 document의 뿌리
+- --main-color 라고 하면 root 에 저장됨

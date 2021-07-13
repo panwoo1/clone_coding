@@ -14,36 +14,29 @@
     <title>Home - My first website.</title>
     <link href="styles.css" rel="stylesheet" />
     <style>
+      :root{
+        --main-color: #8f8add;
+        --default-border: 1px solid var(--main-color)
+      }
       body{
-        height: 100vh;
-        margin: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-      }
-      div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 300px;
-        font-size: 28px;
-        color: white;
-        background-color: teal;
-        flex-wrap: nowrap;
-      }
-      #second{
-        background-color: wheat;
-      }
-    </style>
+        height: 1000vh;
+        margin: 50px;
+        }
+        p {
+          background-color:var(--main-color)
+        }
+        a{
+          color:var(--main-color)
+        }
+      </style>
     <meta charset="utf-8" />
     <meta name="description" content="This is my website" />
   </head>
   <body>
-    <div>1</div>
-    <div id="second">2</div>
-    <div>3</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit atque adipisci laboriosam! Exercitationem, non ad fugit a nulla rerum accusamus fugiat esse quis consequatur placeat omnis veniam nihil voluptatum? Iste.</p>
+    <div>
+      <a href="#">website</a>
+    </div>
   </body>
 </html>
 
