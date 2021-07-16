@@ -7,6 +7,10 @@
   box-sizing: border-box;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
 }
+/* box-sizing: border-box
+   box의 크기를 유지한 채 padding을 주는 방법
+   그렇지 않으면 기존의 크기를 유지하면서 padding을 줌. 
+*/
 
 .nav__list {
   display: flex;
@@ -14,5 +18,30 @@
 }
 
 .nav__link {
+  position: relative;
   color: #2e363e;
+}
+.nav_notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+
+.nav_new {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  left: 30px;
 }
